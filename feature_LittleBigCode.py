@@ -10,7 +10,7 @@ __version__= "1.0.0."
 import pandas as pd
 
 
-df=pd.read_json("results/drugs.json") # Recovery of the JSON file
+df=pd.read_json("https://raw.githubusercontent.com/alexandregrundstein/littlebigcode/main/results/drugs.json") # Recovery of the JSON file
 
 df = df[["atccode","journal_mentions"]] # Selection of the variables of interest
 df = df.explode("journal_mentions").reset_index(drop=True) # Creation of as many lines as different journals (+date) there are

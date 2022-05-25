@@ -11,10 +11,10 @@ SELECT date, SUM(prod_price*prod_qty) as ventes FROM transactions WHERE STR_TO_D
 
 `(SELECT COALESCE(C.client_id, D.client_id) as client_id, ventes_meuble, ventes_deco`  
 `FROM`  
-(SELECT client_id, SUM(prod_price*prod_qty) as ventes_meuble FROM (SELECT * FROM transactions) AS A INNER JOIN (SELECT * FROM product_nomenclature) AS B ON A.prod_id=B.product_id WHERE product_type='MEUBLE' AND STR_TO_DATE(date,'%d/%m/%Y') BETWEEN '2019-01-01' AND '2019-12-31' GROUP BY client_id) AS C 
-LEFT JOIN 
-(SELECT client_id, SUM(prod_price*prod_qty) as ventes_deco FROM (SELECT * FROM transactions) AS A INNER JOIN (SELECT * FROM product_nomenclature) AS B ON A.prod_id=B.product_id WHERE product_type='DECO' AND STR_TO_DATE(date,'%d/%m/%Y') BETWEEN '2019-01-01' AND '2019-12-31' GROUP BY client_id) AS D 
-ON C.client_id=D.client_id)
+`(SELECT client_id, SUM(prod_price*prod_qty) as ventes_meuble FROM (SELECT * FROM transactions) AS A INNER JOIN (SELECT * FROM product_nomenclature) AS B ON A.prod_id=B.product_id WHERE product_type='MEUBLE' AND STR_TO_DATE(date,'%d/%m/%Y') BETWEEN '2019-01-01' AND '2019-12-31' GROUP BY client_id) AS C`   
+`LEFT JOIN`  
+`(SELECT client_id, SUM(prod_price*prod_qty) as ventes_deco FROM (SELECT * FROM transactions) AS A INNER JOIN (SELECT * FROM product_nomenclature) AS B ON A.prod_id=B.product_id WHERE product_type='DECO' AND STR_TO_DATE(date,'%d/%m/%Y') BETWEEN '2019-01-01' AND '2019-12-31' GROUP BY client_id) AS D 
+ON C.client_id=D.client_id)`  
 
 UNION
 

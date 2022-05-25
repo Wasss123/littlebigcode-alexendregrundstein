@@ -81,9 +81,10 @@ def mentions(df,mentions):
 
 
 # Downloading of csv files from GitHub
-drugs_csv = "https://raw.githubusercontent.com/alexandregrundstein/littlebigcode/main/drugs.csv"
-pubmed_csv = "https://raw.githubusercontent.com/alexandregrundstein/littlebigcode/main/pubmed.csv"
-trials_csv = "https://raw.githubusercontent.com/alexandregrundstein/littlebigcode/main/clinical_trials.csv"
+drugs_csv = "https://raw.githubusercontent.com/alexandregrundstein/littlebigcode/main/data/drugs.csv"
+pubmed_csv = "https://raw.githubusercontent.com/alexandregrundstein/littlebigcode/main/data/pubmed.csv"
+trials_csv = "https://raw.githubusercontent.com/alexandregrundstein/littlebigcode/main/data/clinical_trials.csv"
+
 
 df_drugs = pd.read_csv(drugs_csv, header=0)
 df_pubmed = pd.read_csv(pubmed_csv, header=0)

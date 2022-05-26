@@ -98,7 +98,7 @@
                 "date": "2020-01-01"
             }
         ],
-        "clin_trials_mentions": NaN,
+        "clin_trials_mentions": "",
         "journal_mentions": [
             {
                 "journal": "Psychopharmacology",
@@ -126,7 +126,7 @@
                 "date": "2020-01-01"
             }
         ],
-        "clin_trials_mentions": NaN,
+        "clin_trials_mentions": "",
         "journal_mentions": [
             {
                 "journal": "Journal of food protection",
@@ -145,7 +145,7 @@
     {
         "atccode": "R01AD",
         "drugs": "BETAMETHASONE",
-        "pubmed_mentions": NaN,
+        "pubmed_mentions": "",
         "clin_trials_mentions": [
             {
                 "id": "NCT04153396",

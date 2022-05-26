@@ -7,7 +7,7 @@ The objective of test is to create a JSON file from several .csv files represent
 ---
 Program name: test_technique_LittleBigCode.py  
 Language: Python 3.8.8  
-Needed packages: pandas, json  
+Needed libraries: pandas, json  
 Installation: the program can be install anywhere on any computer  
 Modification: .csv files are stored on GitHub [here](https://github.com/alexandregrundstein/littlebigcode/tree/main/data). If the path of the .csv files is modified, then it should also be modify in the program
 

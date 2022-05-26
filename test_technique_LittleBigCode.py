@@ -135,10 +135,10 @@ df_journal = modify_header(df_journal)
 # Creation of the dataframe containing information on pubmed, clinical_trials and journal
 df = pd.concat([df_pubmed,df_trials,df_journal]) 
 
-df = df.T
+df = df.T # Transpose to prepare the dataframe to be transformed in a dictionnary with the structure of the future JSON
 df = df.reset_index()
 df = df.merge(df_drugs,left_on="drugs",right_on="drug").drop(["drug"], axis=1) # Merge to add the atccode
-df = df[["atccode","drugs","pubmed_mentions","clin_trials_mentions","journal_mentions"]] 
+df = df[["atccode","drugs","pubmed_mentions","clin_trials_mentions","journal_mentions"]].fillna("")
 
 # Creation of the final dictionnary
 dict_final = df.to_dict("records")

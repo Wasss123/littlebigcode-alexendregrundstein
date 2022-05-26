@@ -1,7 +1,7 @@
 # Technical test LittleBigCode
 ## Part 1 - Python and Data engineering
 
-The objective of test is to create a JSON file from several .csv files representing the link between drugs (contained in drugs.csv) and their mentions in articles in PubMed (pubmed.csv), in articles in clinical trials (clinical_trials.csv), and in several journals (pubmed.csv and clinical°_trials.csv)
+The objective of test is to create a JSON file from several .csv files representing the link between drugs (contained in drugs.csv) and their mentions in articles in PubMed (pubmed.csv), in articles in clinical trials (clinical_trials.csv), and in several journals (pubmed.csv and clinical_trials.csv)
 
 ### Start
 ---

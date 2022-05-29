@@ -13,7 +13,7 @@ import json
 
 
 def drugs_mention(x,dict_drugs):
-    """This function takes as arguments a variable (x) and a dictionnary (dict_drugs)
+    """This function takes as arguments a dataframe (x) and a dictionnary (dict_drugs)
        It returns a list with drugs from the dictionnary that are also in the variable.
     """
     list_drugs = []
@@ -25,7 +25,7 @@ def drugs_mention(x,dict_drugs):
 
 def modify_header(df):
     """This function takes the first line of a dataframe to modify the column names of this dataframe.
-       The dataframe is the argument of the function.
+       The function takes a dataframe as argument.
        The function returns the dataframe with new column names.
     """
     new_header = df.iloc[0]
